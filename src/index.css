@@ -4,4 +4,5 @@
 @tailwind utilities;
 html {
   font-family: "Nato Sans", sans-serif;
+  background: #393646;
 }
