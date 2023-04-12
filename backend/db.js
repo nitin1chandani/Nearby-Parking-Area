@@ -1,10 +1,15 @@
 const mongoose = require("mongoose");
 
-const mongoURI =
-  "mongodb://parkinn:mananrand@ac-vkdwttq-shard-00-00.ob6e1mx.mongodb.net:27017,ac-vkdwttq-shard-00-01.ob6e1mx.mongodb.net:27017,ac-vkdwttq-shard-00-02.ob6e1mx.mongodb.net:27017/?ssl=true&replicaSet=atlas-ijz60t-shard-0&authSource=admin&retryWrites=true&w=majority";
+const mongoURI = 'mongodb+srv://manan20019:zyzz@123@cluster0.2aqqv5q.mongodb.net/manan?retryWrites=true&w=majority'
+
 const mongoDB = async () => {
-  await mongoose.connect(mongoURI, () => {
-    console.log("connected successfully");
+  await mongoose.connect(mongoURI,{useNewUrlParser:true}, (err,result) => {
+    if(err) console.log("---",err)
+    else {
+      console.log("connected successfully");
+
+    }
+   
   });
 };
 module.exports = mongoDB;
